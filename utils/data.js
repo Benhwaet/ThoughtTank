@@ -11,26 +11,13 @@ const username = [
     'daffyduck',
 ];
 
-const email = [
-    'benhwaet@ymail.com',
-    'lernantino@gmail.com',
-    'ididntsaybanana@rogers.com',
-    'tbrinewall@hotmail.com',
-    'sabulousy@outlook.com',
-    'noisyposy@live.com',
-    'bbcarrots@me.com',
-    'iheartwoodstock@yahoo.com',
-    'awoooo@icloud.com',
-    'dessspicable@gmail.com',
-];
-
 const thoughtText = [
     'I am the best',
     'I am the worst',
     'I like bananas',
     'I like apples',
-    'life is like a box of chocolates',
-    'ahoy hoy is a pirate greeting',
+    'Life is like a box of chocolates',
+    'Ahoy hoy is a pirate greeting',
     'What\'s up doc?',
     'What is the meaning of life?',
     'I am a lumberjack and I am okay',

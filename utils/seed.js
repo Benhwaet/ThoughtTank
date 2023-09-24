@@ -1,4 +1,4 @@
-//keeping as a seed 
+//uncertain about seed implementation, do I need random?
 
 const connection = require('../config/connection');
 const { User, Thought } = require('../models');
@@ -17,4 +17,20 @@ connection.once('open', async () => {
   if (thoughtCheck.length) {
     await connection.dropCollection('thoughts');
   };
+
+  for (let i = 0; i < 10; i++) {
+    const newUser = await User.create({
+      username: getRandomUsername(),
+      email: `${getRandomUsername()}@gmail.com`
+    });
+    for (let i = 0; i < 10; i++) {
+      await Thought.create({
+        thoughtText: getRandomThought(),
+        username: newUser.username
+      });
+    }
+  }
+
+
 });
+

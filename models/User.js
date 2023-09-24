@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const { isEmail } = require('validator');
-const thoughtSchema = require('./Thought');
+const Thought = require('./Thought');
 
 //Schema for User Model
 const userSchema = new Schema (
@@ -17,19 +17,22 @@ const userSchema = new Schema (
       unique: true,
       validate: [ isEmail, 'email is invalid' ]
     },
-    thoughts: [thoughtSchema],
-    friends: [userSchema]
+    thoughts: [Thought],
+    friends: [{
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    }]
   },
   {
     toJSON: {
       virtuals: true,
     },
-    id: true,
   }
 );
 
-userSchema.virtual('friendCount').get(function () {
-  return this.friends.length;
+userSchema
+  .virtual('friendCount').get(function () {
+    return this.friends.length;
 });
 
 const User = model('user', userSchema);
