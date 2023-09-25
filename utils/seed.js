@@ -2,7 +2,7 @@
 
 const connection = require('../config/connection');
 const { User, Thought } = require('../models');
-const { username, thoughtText, reactionBody } = require('../utils/data');
+const { userNames, emails, thoughtText, reactions, friendNames } = require('../utils/data');
 
 connection.on('error', (err) => err);
 
@@ -21,26 +21,30 @@ connection.once('open', async () => {
   const users = [];
 
   for (let i = 0; i < 20; i++) {
-    let username = username[i];
-    let email = `${email[i]}@gmail.com`;
-    let thoughts = thoughtText[i];
-    let friends = username[i];
+    let username = userNames[i];
+    let email = emails[i];
+    let thought = thoughtText[i];
+    let friend = friendNames[i];
 
-    users.push({ username, email, thoughts, friends });
+    users.push({ username, email, thought, friend });
   }
 
   const thoughts = [];
 
   for (let i = 0; i < 20; i++) {
-    let thoughtText = thoughtText[i];
-    let username = username[i];
-    let reactions = reactionBody[i];
+    let thought = thoughtText[i];
+    let username = userNames[i];
+    let reaction = reactions[i];
 
-    thoughts.push({ thoughtText, username, reactions });
+    thoughts.push({ 
+      thought, 
+      username, 
+      reaction, 
+    });
   }
 
-  await User.insertMany(users);
-  await Thought.insertMany(thoughts);
+  await User.collection.insertMany(users);
+  await Thought.collection.insertMany(thoughts);
 
   console.table(users);
   console.table(thoughts);

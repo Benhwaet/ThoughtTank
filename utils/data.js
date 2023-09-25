@@ -1,4 +1,4 @@
-const username = [
+const userNames = [
     'benhwaet',
     'lernantino',
     'orangeuglad',
@@ -19,6 +19,55 @@ const username = [
     'speedygonzales',
     'pepelepew',
     'yosemite_sam',
+    'grannyB'
+];
+
+const emails = [
+        'benhwaet@gmail.com',
+        'lernantino@gmail.com',
+        'orangeuglad@gmail.com',
+        'thalassocrat@gmail.com',
+        'sabulous@gmail.com',
+        'noisome@gmail.com',
+        'bugsbunny@gmail.com',
+        'snoopy123@gmail.com',
+        'bb_wolf@gmail.com',
+        'daffyduck@gmail.com',
+        'porkypig@gmail.com',
+        'elmerfudd@gmail.com',
+        'tweetybird@gmail.com',
+        'roadrunner@gmail.com',
+        'wileecoyote@gmail.com',
+        'foghornleghorn@gmail.com',
+        'marvinthemartian@gmail.com',
+        'speedygonzales@gmail.com',
+        'pepelepew@gmail.com',
+        'yosemite_sam@gmail.com',
+        'grannyBcool@gmail.com'
+    ];
+
+const friendNames = [
+    'lernantino',
+    'orangeuglad',
+    'thalassocrat',
+    'sabulous',
+    'noisome',
+    'bugsbunny',
+    'snoopy123',
+    'bb_wolf',
+    'daffyduck',
+    'porkypig',
+    'elmerfudd',
+    'tweetybird',
+    'roadrunner',
+    'wileecoyote',
+    'foghornleghorn',
+    'marvinthemartian',
+    'speedygonzales',
+    'pepelepew',
+    'yosemite_sam',
+    'grannyB',
+    'benhwaet',
 ];
 
 const thoughtText = [
@@ -42,10 +91,10 @@ const thoughtText = [
     'Andale andale arriba arriba!',
     'I am a perverted skunk',
     'Yeeehaawww! I am a cowboy',
-
+    'I am a sweet old lady',
 ];
 
-const reactionBody = [
+const reactions = [
     'I agree',
     'I disagree',
     'I like it',
@@ -66,7 +115,8 @@ const reactionBody = [
     'I am the fastest mouse in all of Mexico',
     'LEAVE THAT CAT ALONE!',
     'I am a rootin tootin cowboy',
+    'I like you blueberry pies!',
 ];
 
 // Export the functions for use in seed.js
-module.exports = { username, thoughtText, reactionBody };
+module.exports = { userNames, emails, friendNames, thoughtText, reactions };
