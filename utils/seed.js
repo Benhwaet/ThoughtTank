@@ -21,22 +21,22 @@ connection.once('open', async () => {
   const users = [];
 
   for (let i = 0; i < 20; i++) {
-    let username = username[i];
-    let email = `${email[i]}@gmail.com`;
+    let name = username[i];
+    let email = `${username[i]}@gmail.com`;
     let thoughts = thoughtText[i];
     let friends = username[i];
 
-    users.push({ username, email, thoughts, friends });
+    users.push({ name, email, thoughts, friends });
   }
 
   const thoughts = [];
 
   for (let i = 0; i < 20; i++) {
-    let thoughtText = thoughtText[i];
-    let username = username[i];
+    let thoughtTxt = thoughtText[i];
+    let name = username[i];
     let reactions = reactionBody[i];
 
-    thoughts.push({ thoughtText, username, reactions });
+    thoughts.push({ thoughtTxt, name, reactions });
   }
 
   await User.insertMany(users);
