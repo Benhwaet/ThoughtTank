@@ -9,6 +9,16 @@ const username = [
     'snoopy123',
     'bb_wolf',
     'daffyduck',
+    'porkypig',
+    'elmerfudd',
+    'tweetybird',
+    'roadrunner',
+    'wileecoyote',
+    'foghornleghorn',
+    'marvinthemartian',
+    'speedygonzales',
+    'pepelepew',
+    'yosemite_sam',
 ];
 
 const thoughtText = [
@@ -22,6 +32,17 @@ const thoughtText = [
     'What is the meaning of life?',
     'I am a lumberjack and I am okay',
     'Bugs Bunny is horrible',
+    'Th-th-th-that\'s all folks!',
+    'Shhhhh. Be vewy vewy quiet. I\'m hunting wabbits',
+    'I taught I taw a puddy tat',
+    'meep meep',
+    'I am a super genius',
+    'Well howdy doody',
+    'Oh dear, I think that rabbit has escaped',
+    'Andale andale arriba arriba!',
+    'I am a perverted skunk',
+    'Yeeehaawww! I am a cowboy',
+
 ];
 
 const reactionBody = [
@@ -35,26 +56,17 @@ const reactionBody = [
     'I am sure',
     'This is lame',
     'Bugs Bunny is *AWESOME*',
+    'A speech impediment is nothing to be ashamed of',
+    '*whispers* The rabbit will outsmart you again',
+    'You did! You did see a puddy tat!',
+    'I am a super duper genius',
+    'I disagree with your statement',
+    'And howdy to you too',
+    'The rabbit will always escape',
+    'I am the fastest mouse in all of Mexico',
+    'LEAVE THAT CAT ALONE!',
+    'I am a rootin tootin cowboy',
 ];
 
-// Get a random item given an array
-const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
-
-// Gets a random full name
-const getRandomUsername = () =>
-  `${getRandomArrItem(username)}`;
-
-// Function to generate random assignments that we can add to student object.
-const getRandomThought = (int) => {
-  const results = [];
-  for (let i = 0; i < int; i++) {
-    results.push({
-      getThought: getRandomArrItem(thoughtText),
-      getReaction: getRandomArrItem(reactionBody),
-    });
-  }
-  return results;
-};
-
 // Export the functions for use in seed.js
-module.exports = { getRandomUsername, getRandomThought };
+module.exports = { username, thoughtText, reactionBody };
