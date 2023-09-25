@@ -1,7 +1,7 @@
 {
   "name": "Thought_Tank",
   "version": "1.0.0",
-  "description": "A place to store your thoughts",
+  "description": "A tank to store your thoughts",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
