@@ -2,7 +2,7 @@
 
 const connection = require('../config/connection');
 const { User, Thought } = require('../models');
-const { userNames, emails, thoughtText, reactions, friendNames } = require('../utils/data');
+const { userNames, emails, thoughtText, reactions } = require('../utils/data');
 
 connection.on('error', (err) => err);
 
@@ -24,9 +24,9 @@ connection.once('open', async () => {
     let username = userNames[i];
     let email = emails[i];
     let thought = thoughtText[i];
-    let friend = friendNames[i];
+    
 
-    users.push({ username, email, thought, friend });
+    users.push({ username, email, thought});
   }
 
   const thoughts = [];

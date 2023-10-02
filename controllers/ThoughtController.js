@@ -15,10 +15,12 @@ module.exports = {
     // get one thought by id
     async getSingleThought(req, res) {
         try {
-            const thought = await Thought.findById({ _id: req.params.thoughtId });
+            const thought = await Thought.findById(
+                { _id: req.params.thoughtId });
 
             if (!thought) {
-                return res.status(404).json({ message: 'Uh oh, no thought in this head!' });
+                return res.status(404).json(
+                    { message: 'Uh oh, no thought in this head!' });
             }
             res.json(thought);
         } catch (err) {
@@ -37,7 +39,8 @@ module.exports = {
             );
 
             if (!user) {
-                return res.status(404).json({ message: 'Uh oh, no user found with this id!' });
+                return res.status(404).json(
+                    { message: 'Uh oh, no user found with this id!' });
             }
 
             res.json(thought);
@@ -49,7 +52,9 @@ module.exports = {
     // update a thought by id
     async updateThought(req, res) {
         try {
-            const thought = await Thought.findOneAndUpdate({ _id: req.params.thoughtId });
+            const thought = await Thought.findOneAndUpdate(
+                { _id: req.params.thoughtId },
+                req.body, { new: true });
 
             if (!thought) {
                 return res.status(404).json({ message: 'Uh oh, no thought in this head!' });
@@ -63,7 +68,8 @@ module.exports = {
     // delete a thought by id
     async deleteThought(req, res) {
         try {
-            const thought = await Thought.findOneAndDelete({ _id: req.params.thoughtId });
+            const thought = await Thought.findOneAndDelete(
+                { _id: req.params.thoughtId }, req.body, { new: true });
 
             if (!thought) {
                 return res.status(404).json({ message: 'Uh oh, no thought in this head!' });

@@ -4,7 +4,7 @@ module.exports = {
     // get all Users    
     async getUsers(req, res) {
         try {
-            const users = await User.find();
+            const users = await User.find({});
             res.json(users);
         } catch (err) {
             res.status(500).json(err);
@@ -15,9 +15,11 @@ module.exports = {
     async getSingleUser(req, res) {
         try {
             const users = await User.findById({ _id: req.params.userId })
-            .populate('thoughts')
-            .populate('friends');
+            // .populate({path: 'thoughts', select: '-__v'})
+            // .populate({path: 'friends', select: '-__v'})
+            // .select('-__v');
 
+            
             if (!users) {
                 return res.status(404).json({ message: 'Uh oh, no user found with this id!' });
             }
@@ -40,7 +42,9 @@ module.exports = {
     // update a User by id
     async updateUser(req, res) {
         try {
-            const users = await User.findOneAndUpdate({ _id: req.params.userId });
+            const users = await User.findOneAndUpdate(
+                { _id: req.params.userId }, 
+                req.body, { new: true });
 
             if (!users) {
                 return res.status(404).json({ message: 'Uh oh, no user found with this id!' });
@@ -72,7 +76,7 @@ module.exports = {
         try {
             const users = await User.findOneAndUpdate(
                 { _id: req.params.userId },
-                { $addToSet: { friends: req.params.friendId } },
+                { $addToSet: { friends: req.params.friendId }},
                 { new: true }
             );
 
