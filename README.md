@@ -28,31 +28,16 @@ WHEN I test API POST and DELETE routes in Insomnia
 THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 ```
 
-## Mock Up
+## Walkthrough Videos
 
-The following animations show examples of the application's API routes being tested in Insomnia.
+The walkthrough videos provided below demonstrate the functionality of the API routes using Insomnia. The first video shows the GET routes for all users, GET route for a single user,POST route to create a new user, PUT route to update users by id, and DELETE route to delete users by id.
+<https://drive.google.com/file/d/1IppMY0hRqRP2VEIBIIN9-jfC2VfezIr5/view?usp=sharing>
 
-The following animation shows GET routes to return all users and all thoughts being tested in Insomnia:
+The second video shows the POST and DELETE routes for a user's Friends, GET routes for all thoughts, GET route for a single thought, POST route to create a new thought, PUT route to update thoughts by id, and DELETE route to delete thoughts by id.
+<https://drive.google.com/file/d/15qlXtUy5ZdYnj4JWXzsc_JYL_ZJmuOWA/view?usp=sharing>
 
-![Demo of GET routes to return all users and all thoughts being tested in Insomnia.](./Assets/18-nosql-homework-demo-01.gif)
-
-The following animation shows GET routes to return a single user and a single thought being tested in Insomnia:
-
-![Demo that shows GET routes to return a single user and a single thought being tested in Insomnia.](./Assets/18-nosql-homework-demo-02.gif)
-
-The following animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia:
-
-![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia.](./Assets/18-nosql-homework-demo-03.gif)
-
-In addition to this, your walkthrough video should show the POST, PUT, and DELETE routes for thoughts being tested in Insomnia.
-
-The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
-
-![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](./Assets/18-nosql-homework-demo-04.gif)
-
-In addition to this, the walkthrough video below shows the POST and DELETE routes for reactions to thoughts being tested in Insomnia:
-
--insert video URL here-
+The last video shows the POST and DELETE routes for a thought's Reactions.
+<https://drive.google.com/file/d/1gRdXjNKWl4Io3mbNh88faKq-cQJLs4Ha/view?usp=sharing>
 
 ## Table of Contents
 
